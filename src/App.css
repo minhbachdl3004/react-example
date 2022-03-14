@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.color {
+  margin: auto;
+  margin-top: 300px;
+  width: 220px;
+  height: 200px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+#hex {
+  margin-left: 28%;
+}
+
+.changeColor {
+  width: 100%;
+  height: 25%;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [count, setCount] = useState(0);
+  const decrementCount = () => {
+    setCount(prevCount => prevCount - 1)
+  }
+  const incrementCount = () => {
+    setCount(prevCount => prevCount + 1)
+  }
+  const [color, setColor] = useState('');
+  const getNewColor = () => {
+    let symbols, color;
+    symbols = '0123456789ABCDEF';
+    color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += symbols[Math.floor(Math.random() * 16)];
+    }
+    document.body.style.background = color;
+    setColor(color)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <div className='color'>
+    //   <span id = "hex">{color ? color : 'default'}</span>
+    //   <button className='changeColor' onClick={() => getNewColor()}>Change Background Color</button>
+    // </div>
+    <>
+      <button onClick={decrementCount}>-</button>
+      <span>{count}</span>
+      <button onClick={incrementCount}>+</button>
+    </>
   );
 }
 
