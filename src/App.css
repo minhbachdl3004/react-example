@@ -39,7 +39,6 @@
 
 .color {
   margin: auto;
-  margin-top: 300px;
   width: 220px;
   height: 200px;
   display: block;
@@ -48,7 +47,7 @@
 }
 
 #hex {
-  margin-left: 28%;
+  margin-left: 40%;
 }
 
 .changeColor {
@@ -63,4 +62,17 @@ button {
   height: 25px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.exam-3 {
+  width: 100px;
+}
+
+.title {
+  margin-left: 10px;
+}
+
+.shoot {
+  width: 120px;
+  height: 25px;
 }
